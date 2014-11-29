@@ -1,0 +1,5 @@
+<?php
+session_start();
+include "../etc/config.php";
+include "../user_infomation.html";
+?>

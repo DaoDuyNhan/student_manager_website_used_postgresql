@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="http://localhost/duynhan_web/VietNhat_ThucHanh_CSDL_NTDN_2014_1/" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <?php
+       include "$BASE_PATH/quick.php";
+       ?>
+    
+    <div class="container theme-showcase" role="main">
+      <div class="page-header">
+	<h1>Thông tin cá nhân</h1>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+	<div class="panel panel-primary">
+	  <div class="panel-heading"><b>Thông tin sinh viên</b></div>
+	  <table class="table table-hover">
+            <tbody>
+              <tr>
+		<td class="col-md-3" style="text-align:right;"><b>Mã số sinh viên</b></td>
+		<td class="col-md-1" style="text-align:center;">:</td>
+		<td class="col-md-6"><?php
+					echo $student_id;
+					?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Họ tên sinh viên</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_name;
+		       ?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Ngày sinh</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_birth;
+		       ?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Khóa</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_course;
+		       ?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Lớp</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_class;
+		       ?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Chương trình</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_training_system;
+		       ?></td>
+              </tr>
+              <tr>
+		<td style="text-align:right;"><b>Hệ học</b></td>
+		<td style="text-align:center;">:</td>
+		<td><?php
+		       echo $student_level_school;
+		       ?></td>
+              </tr>
+	    </tbody>
+	  </table>
+	</div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="container-fluid">
+        <p class="">Hanoi University of Science and Technology - No. 1, Dai Co Viet Str., Hanoi, Vietnam<br>Tel: (+844)38682305, (+844)38692008 - E-mail: DTDH@mail.hust.edu.vn</p>
+      </div>
+    </footer>
+  </body>
+
+</html>

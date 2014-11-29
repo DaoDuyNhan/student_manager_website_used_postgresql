@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+<div class="container" id="loginheader">
+    <div class="col-md-2 col-md-offset-1">
+        <img src="HUST_logo.jpg" class="img-polaroid img-responsive" style="float:right">
+    </div>
+    <div class="col-md-9" style="padding: 40px 40px">
+         <h1 class="">
+            <b class="h1">S</b>tudent
+            <b class="h1">I</b>nformation
+            <b class="h1">S</b>ystem of
+            <b class="h1">HEDSPI</b>
+          </h1>
+
+         <h2 class="">
+            <b class="h2">H</b>anoi
+            <b class="h2">U</b>niversity of
+            <b class="h2">S</b>cience and
+            <b class="h2">T</b>echnology</h2>
+
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading"> <b>Đăng nhập</b>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post" action="">
+                    <div class="form-group">
+                        <label for="inputId" class="col-sm-3 control-label">Tài khoản</label>
+                        <div class="col-sm-9">
+                            <input name="username" type="text" class="form-control" id="inputId" placeholder="Nhập mã số sinh viên" required="" contenteditable="false">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword" class="col-sm-3 control-label">Mật khẩu</label>
+                        <div class="col-sm-9">
+                            <input name= "password" type="password" class="form-control" id="inputPassword" placeholder="Nhập mật khẩu" required="" contenteditable="false">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-sm-offset-3" style="color:red; padding-bottom:15px;"><b><?php
+													if ( isset( $error_login  ) ){
+													echo $error_login;
+													}
+													?></b></div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button name="submit" type="submit" class="btn btn-lg btn-primary btn-block">Đăng nhập</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+<div class="container-fluid">
+    <p class="">Hanoi University of Science and Technology - No. 1, Dai Co Viet Str., Hanoi, Vietnam
+	<br />Tel: (+844)38682305, (+844)38692008 - E-mail: DTDH@mail.hust.edu.vn
+</p>
+		</div>
+</footer>
+</body>
+
+</html>

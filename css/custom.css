@@ -1,0 +1,77 @@
+/* CSS used here will be applied after bootstrap.css */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+    background-color: #e0ffff;
+	margin-bottom: 100px;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+  background: linear-gradient(#2060a0, #b0cae3);
+  padding: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  clear: both;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+nav {
+  position: relative;
+  top: 10px;
+}
+
+b.h1 {
+  font-size: 120%;
+  color: yellow;
+}
+
+b.h2 {
+  font-size: 120%;
+  color: red;
+}
+
+b.sm {
+  font-size: 120%;
+  color: red;
+}
+
+.headertext {
+  padding: 15px 0px;
+}
+
+a.logout:link {color:#ff0000;text-decoration:none;}
+a.logout:hover {color:#ffcc00;text-decoration:none;}
+
+.dropdown:hover{background-color: lightgray;}
+.dropdown:hover>.dropdown-menu{display:block;}
+ul.dropdown-menu a:hover{background-color:lightgray;}
+  
+#loginheader {
+  padding: 25px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: #FFFFFF;
+  background: linear-gradient(#2060a0, #b0cae3);
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px #888888;
+}
+
+.form-group.last {
+ margin-bottom: 0px;
+}

@@ -1,0 +1,4 @@
+<?php
+include "./etc/config.php";
+include "$BASE_PATH/login.html"
+?>
