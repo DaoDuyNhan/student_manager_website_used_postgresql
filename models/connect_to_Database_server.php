@@ -1,5 +1,5 @@
 <?php
-include "$BASE_PATH/etc/config_database_server/config_database_server.php";
+include $_SESSION['BASE_PATH']."/etc/config_database_server/config_database_server.php";
 
 /* <==== Start: Connect to database server ====> */
 /*

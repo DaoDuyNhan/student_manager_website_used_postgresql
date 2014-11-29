@@ -1,14 +1,12 @@
 <?php
 session_start();
-include_once "../etc/config.php";
-include_once "$BASE_PATH/models/user/model_user.php";
+include_once $_SESSION['BASE_PATH']."/models/user/model_user.php";
 /* <==== Check is login? ====> */
 /* If user is login => goto homepage
    else => login
 */
 if( isset($_SESSION['username']) ){
-  echo "Casi gi the nay";
-header( "$BASE_PATH/controllers/user_loginsucess.php");
+  header( "Location:".$_SESSION['BASE_PATH']."/controllers/user_loginsucess.php");
 } else {
 
   /* <==== Start: Process login ====> */
@@ -30,29 +28,25 @@ header( "$BASE_PATH/controllers/user_loginsucess.php");
           $_SESSION['username'] = $row['username'];
           $_SESSION['password'] = $row['password'];
           $_SESSION['fullname'] = $row['fullname'];
-          header("Location:$BASE_URL"."controllers/user_loginsucess.php");
+          header("Location:".$_SESSION['BASE_URL']."/controllers/user_loginsucess.php");
         } else {
           $error_login = "Mật khẩu không đúng!";
           /* Include view */
-          include_once "$BASE_PATH/login.html";
-          //header( "location:$BASE_URL/controllers/user_login.php");
+          include_once $_SESSION['BASE_PATH']."/login.html";
         }
       } else {
         $error_login = "Tài khoản không hợp lệ!";
         /* Include view */
-        include_once "$BASE_PATH/login.html";
-        //header( "location:$BASE_URL/controllers/user_login.php");
+        include_once $_SESSION['BASE_PATH']."/login.html";
       }
     } else {
       $error_login = "Bạn hãy nhập tài khoản và mật khẩu!";
       /* Include view */
-      include_once "$BASE_PATH/login.html";
-      //header( "location:$BASE_URL/controllers/user_login.php");
+      include_once $_SESSION['BASE_PATH']."/login.html";
     }
   } else {
     /* Include view */
-    include_once "$BASE_PATH/login.html";
-    //header( "location:$BASE_URL/controllers/user_login.php");
+    include_once $_SESSION['BASE_PATH']."/login.html";
   }
 }
   /* <==== End: Process login ====> */

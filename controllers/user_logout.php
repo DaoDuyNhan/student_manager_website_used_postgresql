@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../etc/config.php";
+$Dup_base_url = $_SESSION['BASE_URL'];
 session_destroy();
-header("location:$BASE_URL");
+header("Location:".$Dup_base_url);
 ?>

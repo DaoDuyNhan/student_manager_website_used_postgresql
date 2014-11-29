@@ -1,7 +1,6 @@
 <?php
 session_start();
-include "../etc/config.php";
-include_once "$BASE_PATH/models/user/model_user.php";
+include_once $_SESSION['BASE_PATH']."/models/user/model_user.php";
 
 if ( isset ($_POST['changepassword']) )
 {
@@ -16,21 +15,21 @@ if ( isset ($_POST['changepassword']) )
       if ( $row['password'] == $_POST['newpassword'] ){
         $_SESSION['password'] = $row['password'];
         $sucess_changepassword = "Chúc mừng bạn đã thay đổi mật khẩu thành công!";
-        include_once "$BASE_PATH/changepassword.html";
+        include_once $_SESSION['BASE_PATH']."/changepassword.html";
       } else {
         $error_changepassword = "Có lỗi khi đổi mật khẩu của bạn, hãy thử lại!";
-        include_once "$BASE_PATH/changepassword.html";
+        include_once $_SESSION['BASE_PATH']."/changepassword.html";
       }
     } else {
       $error_changepassword = "Hai mật khẩu mới không giống nhau!";
-      include_once "$BASE_PATH/changepassword.html";
+      include_once $_SESSION['BASE_PATH']."/changepassword.html";
     }
   } else {
     $error_changepassword = "Mật khẩu cũ không đúng!";
-    include_once "$BASE_PATH/changepassword.html";
+    include_once $_SESSION['BASE_PATH']."/changepassword.html";
   }
 } else {
-  include_once "$BASE_PATH/changepassword.html";
+  include_once $_SESSION['BASE_PATH']."/changepassword.html";
 }
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "$BASE_PATH/models/connect_to_database_server.php";
+include $_SESSION['BASE_PATH']."/models/connect_to_database_server.php";
 class User{
   /* <==== Start: Get infomation of user by username ====> */
   public function get_info_user_by_username( $username ){
@@ -18,6 +18,10 @@ class User{
   /* <==== Start: Get common infomation user by username ====> */
   public function get_common_info_by_username ( $username  ){
            $query = "select * from \"user\" where \"username\" = '$username';";
+           return pg_query($query);
+         }
+  public function get_timetable_by_username( $username ){
+           $query = 'select * from '."\"timetable\" " ."where \"username\" = '".$username."';";
            return pg_query($query);
          }
 }

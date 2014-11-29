@@ -25,15 +25,15 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php
-					echo $BASE_URL;
+					echo $_SESSION['BASE_URL'];
 					?>/controllers/user_loginsucess.php" class="">Trang chủ</a></li>
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thông tin người sử dụng <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php
-			     echo $BASE_URL;
+			     echo $_SESSION['BASE_URL'];
 			     ?>/controllers/user_infomation.php" class="">Thông tin cá nhân</a></li>
                 <li><a href="<?php
-			     echo $BASE_URL;
+			     echo $_SESSION['BASE_URL'];
 			     ?>/controllers/changepassword.php" class="">Đổi mật khẩu</a></li>
               </ul>
             </li>
@@ -45,8 +45,12 @@
             </li>
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kế hoạch học tập <span class="caret"></span></a>
 			  <ul class="dropdown-menu" role="menu">
-                <li><a href="#" class="">Biểu đồ</a></li>
-                <li><a href="#" class="">Thời khóa biểu</a></li>
+                <li><a href="<?php
+			     echo $_SESSION['BASE_URL'];
+			     ?>/controllers/schedule.php" class="">Biểu đồ</a></li>
+                <li><a href="<?php
+			     echo $_SESSION['BASE_URL'];
+			     ?>/controllers/timetable.php" class="">Thời khóa biểu</a></li>
                 <li><a href="#" class="">Lịch thi</a></li>
               </ul>
             </li>
@@ -80,7 +84,7 @@
 									echo $_SESSION['fullname'];
 									}
 									?></b>  <a href="<?php
-											 echo $BASE_URL;
+											 echo $_SESSION['BASE_URL'];
 											 ?>/controllers/user_logout.php" class="navbar-link">[Đăng xuất]</a></p>
         </div>
       </div>
